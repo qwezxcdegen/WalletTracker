@@ -15,7 +15,7 @@
 		07C3158329CBBD860090C372 /* WalletsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3158229CBBD860090C372 /* WalletsListTableViewController.swift */; };
 		07C3158529CBBE4E0090C372 /* WalletsListTVC + AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3158429CBBE4E0090C372 /* WalletsListTVC + AlertController.swift */; };
 		07C3158729CBBE880090C372 /* WalletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3158629CBBE880090C372 /* WalletTableViewCell.swift */; };
-		07C3158929CBC09A0090C372 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3158829CBC09A0090C372 /* WalletModel.swift */; };
+		07C3159129CBC9180090C372 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3159029CBC9180090C372 /* WalletModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		07C3158229CBBD860090C372 /* WalletsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsListTableViewController.swift; sourceTree = "<group>"; };
 		07C3158429CBBE4E0090C372 /* WalletsListTVC + AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WalletsListTVC + AlertController.swift"; sourceTree = "<group>"; };
 		07C3158629CBBE880090C372 /* WalletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTableViewCell.swift; sourceTree = "<group>"; };
-		07C3158829CBC09A0090C372 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
+		07C3159029CBC9180090C372 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +62,12 @@
 		07C3156D29CBBC4A0090C372 /* WalletTracker */ = {
 			isa = PBXGroup;
 			children = (
+				07C3159029CBC9180090C372 /* WalletModel.swift */,
 				07C3156E29CBBC4A0090C372 /* AppDelegate.swift */,
 				07C3157029CBBC4A0090C372 /* SceneDelegate.swift */,
 				07C3157429CBBC4A0090C372 /* Main.storyboard */,
 				07C3158629CBBE880090C372 /* WalletTableViewCell.swift */,
 				07C3158229CBBD860090C372 /* WalletsListTableViewController.swift */,
-				07C3158829CBC09A0090C372 /* WalletModel.swift */,
 				07C3158429CBBE4E0090C372 /* WalletsListTVC + AlertController.swift */,
 				07C3157729CBBC4B0090C372 /* Assets.xcassets */,
 				07C3157929CBBC4B0090C372 /* LaunchScreen.storyboard */,
@@ -151,7 +151,7 @@
 				07C3158529CBBE4E0090C372 /* WalletsListTVC + AlertController.swift in Sources */,
 				07C3157129CBBC4A0090C372 /* SceneDelegate.swift in Sources */,
 				07C3158329CBBD860090C372 /* WalletsListTableViewController.swift in Sources */,
-				07C3158929CBC09A0090C372 /* WalletModel.swift in Sources */,
+				07C3159129CBC9180090C372 /* WalletModel.swift in Sources */,
 				07C3158729CBBE880090C372 /* WalletTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
