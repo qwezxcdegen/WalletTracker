@@ -45,15 +45,12 @@ class WalletsListTableViewController: UITableViewController {
     
     private func fetchWalletData(address: String) {
         guard let url = URL(string: "https://api.shyft.to/sol/v1/wallet/balance?network=mainnet-beta&wallet=\(address)") else { return }
-        print(1)
         var request = URLRequest(url: url)
         request.addValue("-3iYNcRok7Gm4EMl", forHTTPHeaderField: "x-api-key")
         request.httpMethod = "GET"
-        print(2)
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data else { return }
             guard error == nil else { return }
-            print(3)
             guard let walletData = try? JSONDecoder().decode(Wallet.self, from: data) else { return }
             DispatchQueue.main.async {
                 self.wallets.append(Result(balance: walletData.result.balance))
