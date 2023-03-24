@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0736003129CCA1F600BEE859 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0736003029CCA1F600BEE859 /* TableViewController.swift */; };
 		07C3156F29CBBC4A0090C372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3156E29CBBC4A0090C372 /* AppDelegate.swift */; };
 		07C3157129CBBC4A0090C372 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3157029CBBC4A0090C372 /* SceneDelegate.swift */; };
 		07C3157629CBBC4A0090C372 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C3157429CBBC4A0090C372 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0736003029CCA1F600BEE859 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		07C3156B29CBBC4A0090C372 /* WalletTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalletTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C3156E29CBBC4A0090C372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07C3157029CBBC4A0090C372 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				07C3156E29CBBC4A0090C372 /* AppDelegate.swift */,
 				07C3157029CBBC4A0090C372 /* SceneDelegate.swift */,
 				07C3157429CBBC4A0090C372 /* Main.storyboard */,
+				0736003029CCA1F600BEE859 /* TableViewController.swift */,
 				07C3158629CBBE880090C372 /* WalletTableViewCell.swift */,
 				07C3158229CBBD860090C372 /* WalletsListTableViewController.swift */,
 				07C3158429CBBE4E0090C372 /* WalletsListTVC + AlertController.swift */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07C3156F29CBBC4A0090C372 /* AppDelegate.swift in Sources */,
+				0736003129CCA1F600BEE859 /* TableViewController.swift in Sources */,
 				07C3158529CBBE4E0090C372 /* WalletsListTVC + AlertController.swift in Sources */,
 				07C3157129CBBC4A0090C372 /* SceneDelegate.swift in Sources */,
 				07C3158329CBBD860090C372 /* WalletsListTableViewController.swift in Sources */,
