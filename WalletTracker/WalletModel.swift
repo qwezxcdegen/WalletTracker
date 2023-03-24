@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - Wallet
 struct Wallet: Codable {
     let success: Bool
     let message: String
@@ -15,5 +16,9 @@ struct Wallet: Codable {
 
 // MARK: - Result
 struct Result: Codable {
-    let balance: Double
+    let walletName: String?
+    let walletAddress: String?
+    let sol_balance: Double
+    let num_tokens: Int
+    let num_nfts: Int
 }
