@@ -46,6 +46,10 @@ class DetailsViewController: UIViewController {
                 }
                 self.tokensTableView.reloadData()
                 print(self.tokens)
+<<<<<<< HEAD
+                self.tokens = self.tokens.sorted { $0.balance > $1.balance }
+=======
+>>>>>>> master
             }
         }.resume()
     }

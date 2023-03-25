@@ -25,6 +25,10 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.activityIndicator.stopAnimating()
             }
         }
+<<<<<<< HEAD
+        cell.tokenImage.layer.cornerRadius = cell.tokenImage.frame.height / 2
+=======
+>>>>>>> master
         cell.tokenAmountLabel.text = String(tokens[index].balance)
         cell.tokenNameLabel.text = tokens[index].info.symbol
         
