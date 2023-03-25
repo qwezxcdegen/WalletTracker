@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0736003129CCA1F600BEE859 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0736003029CCA1F600BEE859 /* TableViewController.swift */; };
+		077CE20F29CED5BA004B3779 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077CE20E29CED5BA004B3779 /* DetailsViewController.swift */; };
+		077CE21229CED63B004B3779 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077CE21129CED63B004B3779 /* UIImageView + Extension.swift */; };
+		077CE21429CED6CB004B3779 /* DetailsVC + TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077CE21329CED6CB004B3779 /* DetailsVC + TableVC.swift */; };
+		077CE21629CED90F004B3779 /* TokenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077CE21529CED90F004B3779 /* TokenTableViewCell.swift */; };
+		077CE21829CEDA13004B3779 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077CE21729CEDA13004B3779 /* TokenModel.swift */; };
+		077CE21A29CEE5B5004B3779 /* String + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077CE21929CEE5B5004B3779 /* String + Extention.swift */; };
 		07C3156F29CBBC4A0090C372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3156E29CBBC4A0090C372 /* AppDelegate.swift */; };
 		07C3157129CBBC4A0090C372 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3157029CBBC4A0090C372 /* SceneDelegate.swift */; };
 		07C3157629CBBC4A0090C372 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C3157429CBBC4A0090C372 /* Main.storyboard */; };
@@ -20,7 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0736003029CCA1F600BEE859 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		077CE20E29CED5BA004B3779 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		077CE21129CED63B004B3779 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
+		077CE21329CED6CB004B3779 /* DetailsVC + TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailsVC + TableVC.swift"; sourceTree = "<group>"; };
+		077CE21529CED90F004B3779 /* TokenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenTableViewCell.swift; sourceTree = "<group>"; };
+		077CE21729CEDA13004B3779 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
+		077CE21929CEE5B5004B3779 /* String + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extention.swift"; sourceTree = "<group>"; };
 		07C3156B29CBBC4A0090C372 /* WalletTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalletTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C3156E29CBBC4A0090C372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07C3157029CBBC4A0090C372 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +55,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		077CE20B29CED550004B3779 /* First VC */ = {
+			isa = PBXGroup;
+			children = (
+				07C3158629CBBE880090C372 /* WalletTableViewCell.swift */,
+				07C3158229CBBD860090C372 /* WalletsListTableViewController.swift */,
+				07C3158429CBBE4E0090C372 /* WalletsListTVC + AlertController.swift */,
+				07C3159029CBC9180090C372 /* WalletModel.swift */,
+			);
+			name = "First VC";
+			sourceTree = "<group>";
+		};
+		077CE20C29CED564004B3779 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07C3157729CBBC4B0090C372 /* Assets.xcassets */,
+				07C3157929CBBC4B0090C372 /* LaunchScreen.storyboard */,
+				07C3157C29CBBC4B0090C372 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		077CE20D29CED59C004B3779 /* Second VC */ = {
+			isa = PBXGroup;
+			children = (
+				077CE20E29CED5BA004B3779 /* DetailsViewController.swift */,
+				077CE21329CED6CB004B3779 /* DetailsVC + TableVC.swift */,
+				077CE21529CED90F004B3779 /* TokenTableViewCell.swift */,
+				077CE21729CEDA13004B3779 /* TokenModel.swift */,
+			);
+			name = "Second VC";
+			sourceTree = "<group>";
+		};
+		077CE21029CED620004B3779 /* Common Files */ = {
+			isa = PBXGroup;
+			children = (
+				07C3157429CBBC4A0090C372 /* Main.storyboard */,
+				07C3156E29CBBC4A0090C372 /* AppDelegate.swift */,
+				07C3157029CBBC4A0090C372 /* SceneDelegate.swift */,
+				077CE21129CED63B004B3779 /* UIImageView + Extension.swift */,
+				077CE21929CEE5B5004B3779 /* String + Extention.swift */,
+			);
+			name = "Common Files";
+			sourceTree = "<group>";
+		};
 		07C3156229CBBC4A0090C372 = {
 			isa = PBXGroup;
 			children = (
@@ -64,17 +118,10 @@
 		07C3156D29CBBC4A0090C372 /* WalletTracker */ = {
 			isa = PBXGroup;
 			children = (
-				07C3159029CBC9180090C372 /* WalletModel.swift */,
-				07C3156E29CBBC4A0090C372 /* AppDelegate.swift */,
-				07C3157029CBBC4A0090C372 /* SceneDelegate.swift */,
-				07C3157429CBBC4A0090C372 /* Main.storyboard */,
-				0736003029CCA1F600BEE859 /* TableViewController.swift */,
-				07C3158629CBBE880090C372 /* WalletTableViewCell.swift */,
-				07C3158229CBBD860090C372 /* WalletsListTableViewController.swift */,
-				07C3158429CBBE4E0090C372 /* WalletsListTVC + AlertController.swift */,
-				07C3157729CBBC4B0090C372 /* Assets.xcassets */,
-				07C3157929CBBC4B0090C372 /* LaunchScreen.storyboard */,
-				07C3157C29CBBC4B0090C372 /* Info.plist */,
+				077CE21029CED620004B3779 /* Common Files */,
+				077CE20D29CED59C004B3779 /* Second VC */,
+				077CE20C29CED564004B3779 /* Supporting Files */,
+				077CE20B29CED550004B3779 /* First VC */,
 			);
 			path = WalletTracker;
 			sourceTree = "<group>";
@@ -151,10 +198,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				07C3156F29CBBC4A0090C372 /* AppDelegate.swift in Sources */,
-				0736003129CCA1F600BEE859 /* TableViewController.swift in Sources */,
+				077CE21829CEDA13004B3779 /* TokenModel.swift in Sources */,
+				077CE21629CED90F004B3779 /* TokenTableViewCell.swift in Sources */,
 				07C3158529CBBE4E0090C372 /* WalletsListTVC + AlertController.swift in Sources */,
 				07C3157129CBBC4A0090C372 /* SceneDelegate.swift in Sources */,
+				077CE21429CED6CB004B3779 /* DetailsVC + TableVC.swift in Sources */,
 				07C3158329CBBD860090C372 /* WalletsListTableViewController.swift in Sources */,
+				077CE21A29CEE5B5004B3779 /* String + Extention.swift in Sources */,
+				077CE21229CED63B004B3779 /* UIImageView + Extension.swift in Sources */,
+				077CE20F29CED5BA004B3779 /* DetailsViewController.swift in Sources */,
 				07C3159129CBC9180090C372 /* WalletModel.swift in Sources */,
 				07C3158729CBBE880090C372 /* WalletTableViewCell.swift in Sources */,
 			);
