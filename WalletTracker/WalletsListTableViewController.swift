@@ -25,6 +25,7 @@ class WalletsListTableViewController: UITableViewController {
         guard let segue = segue.destination as? DetailsViewController else { return }
         guard let index = tableView.indexPathForSelectedRow?.row else { return }
         segue.walletAddress = wallets[index].walletAddress!
+        segue.solBalance = wallets[index].sol_balance
     }
     
     // MARK: - Table view data source

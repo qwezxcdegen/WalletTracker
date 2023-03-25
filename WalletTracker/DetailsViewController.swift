@@ -17,16 +17,18 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var walletAddressLabel: UILabel!
     
     var walletAddress = ""
+    var solBalance = 0.0
     
     var tokens: [TokenResult] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchTokensFromAddress()
         self.tokensTableView.delegate = self
         self.tokensTableView.dataSource = self
+        tokens.append(TokenResult(address: "qwe", balance: solBalance, info: TokenInfo(name: "Solana", symbol: "SOL", image: "https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png")))
         
         walletAddressLabel.text = walletAddress
-        fetchTokensFromAddress()
     }
     
     private func fetchTokensFromAddress() {
@@ -50,4 +52,5 @@ class DetailsViewController: UIViewController {
             }
         }.resume()
     }
+    
 }
