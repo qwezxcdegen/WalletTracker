@@ -20,6 +20,13 @@ class WalletsListTableViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = editButtonItem
     }
     
+    // MARK: - Segues
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segue = segue.destination as? DetailsViewController else { return }
+        guard let index = tableView.indexPathForSelectedRow?.row else { return }
+        segue.walletAddress = wallets[index].walletAddress!
+    }
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         1
@@ -55,7 +62,6 @@ class WalletsListTableViewController: UITableViewController {
         if editingStyle == .delete {
             wallets.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-//            tableView.reloadData()
         }
     }
     
