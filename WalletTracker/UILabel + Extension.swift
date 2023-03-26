@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UILabel {
-    func getCurrencyPrice(id: String, cell: TokenTableViewCell, completionHandler: @escaping () -> Void) {
+    func getCurrencyPrice(id: String, cell: TokenTableViewCell, completionHandler: @escaping (Double) -> Void) {
         print("1")
         DispatchQueue.global().async { [weak self] in
             guard let url = URL(string: "https://api.coingecko.com/api/v3/simple/price?ids=\(id)&vs_currencies=usd") else { return }
@@ -32,7 +32,7 @@ extension UILabel {
                     var totalPrice = amount * price
                     totalPrice = round(totalPrice * 1000) / 1000
                     self?.text = "\(totalPrice)$"
-                    completionHandler()
+                    completionHandler(totalPrice)
                 }
             }.resume()
         }
