@@ -18,11 +18,19 @@ class DetailsViewController: UIViewController {
     
     var walletAddress = ""
     var solBalance = 0.0
+    var totalBalance = 0.0 {
+        didSet {
+            totalBalanceLabel.text = String(round(totalBalance * 1000) / 1000) + "$"
+        }
+    }
     
     var tokens: [TokenResult] = []
+    var coins: Coins = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fetchCoinsIDs()
         
         fetchTokensFromAddress()
         
@@ -54,12 +62,25 @@ class DetailsViewController: UIViewController {
                     }
                 }
                 self.tokensTableView.reloadData()
-                print(self.tokens)
-                self.tokens = self.tokens.sorted { $0.balance > $1.balance }
+//                self.tokens = self.tokens.sorted { $0.balance > $1.balance }
             }
         }.resume()
     }
     
+    private func fetchCoinsIDs() {
+        guard let url = URL(string: "https://api.coingecko.com/api/v3/coins/list") else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data, error == nil else { return }
+            guard let coinsData = try? JSONDecoder().decode(Coins.self, from: data) else { return }
+            DispatchQueue.main.async {
+                self.coins = coinsData
+            }
+        }.resume()
+    }
+    
+    // MARK: - Method for tap gesture
     @objc
     private func labelDidTap(sender: UITapGestureRecognizer) {
         let labelText = walletAddressLabel.text
