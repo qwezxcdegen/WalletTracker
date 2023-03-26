@@ -22,6 +22,9 @@
 		07C3158529CBBE4E0090C372 /* WalletsListTVC + AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3158429CBBE4E0090C372 /* WalletsListTVC + AlertController.swift */; };
 		07C3158729CBBE880090C372 /* WalletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3158629CBBE880090C372 /* WalletTableViewCell.swift */; };
 		07C3159129CBC9180090C372 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3159029CBC9180090C372 /* WalletModel.swift */; };
+		07D5226829D0AE01007E0B70 /* CoinsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D5226729D0AE01007E0B70 /* CoinsModel.swift */; };
+		07D5226A29D0B000007E0B70 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D5226929D0B000007E0B70 /* UILabel + Extension.swift */; };
+		07D5226C29D0B1D7007E0B70 /* PriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D5226B29D0B1D7007E0B70 /* PriceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		07C3158429CBBE4E0090C372 /* WalletsListTVC + AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WalletsListTVC + AlertController.swift"; sourceTree = "<group>"; };
 		07C3158629CBBE880090C372 /* WalletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTableViewCell.swift; sourceTree = "<group>"; };
 		07C3159029CBC9180090C372 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
+		07D5226729D0AE01007E0B70 /* CoinsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsModel.swift; sourceTree = "<group>"; };
+		07D5226929D0B000007E0B70 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
+		07D5226B29D0B1D7007E0B70 /* PriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 				077CE21329CED6CB004B3779 /* DetailsVC + TableVC.swift */,
 				077CE21529CED90F004B3779 /* TokenTableViewCell.swift */,
 				077CE21729CEDA13004B3779 /* TokenModel.swift */,
+				07D5226729D0AE01007E0B70 /* CoinsModel.swift */,
+				07D5226929D0B000007E0B70 /* UILabel + Extension.swift */,
+				07D5226B29D0B1D7007E0B70 /* PriceModel.swift */,
 			);
 			name = "Second VC";
 			sourceTree = "<group>";
@@ -199,16 +208,19 @@
 			files = (
 				07C3156F29CBBC4A0090C372 /* AppDelegate.swift in Sources */,
 				077CE21829CEDA13004B3779 /* TokenModel.swift in Sources */,
+				07D5226A29D0B000007E0B70 /* UILabel + Extension.swift in Sources */,
 				077CE21629CED90F004B3779 /* TokenTableViewCell.swift in Sources */,
 				07C3158529CBBE4E0090C372 /* WalletsListTVC + AlertController.swift in Sources */,
 				07C3157129CBBC4A0090C372 /* SceneDelegate.swift in Sources */,
 				077CE21429CED6CB004B3779 /* DetailsVC + TableVC.swift in Sources */,
 				07C3158329CBBD860090C372 /* WalletsListTableViewController.swift in Sources */,
+				07D5226829D0AE01007E0B70 /* CoinsModel.swift in Sources */,
 				077CE21A29CEE5B5004B3779 /* String + Extention.swift in Sources */,
 				077CE21229CED63B004B3779 /* UIImageView + Extension.swift in Sources */,
 				077CE20F29CED5BA004B3779 /* DetailsViewController.swift in Sources */,
 				07C3159129CBC9180090C372 /* WalletModel.swift in Sources */,
 				07C3158729CBBE880090C372 /* WalletTableViewCell.swift in Sources */,
+				07D5226C29D0B1D7007E0B70 /* PriceModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
