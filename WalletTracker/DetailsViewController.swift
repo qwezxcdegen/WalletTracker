@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
+    
     
     @IBOutlet weak var tokensTableView: UITableView!
     
@@ -23,12 +23,19 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         fetchTokensFromAddress()
+        
         self.tokensTableView.delegate = self
         self.tokensTableView.dataSource = self
+        
         tokens.append(TokenResult(address: "qwe", balance: solBalance, info: TokenInfo(name: "Solana", symbol: "SOL", image: "https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png")))
         
         walletAddressLabel.text = walletAddress
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(labelDidTap))
+        tap.numberOfTapsRequired = 1
+        walletAddressLabel.addGestureRecognizer(tap)
     }
     
     private func fetchTokensFromAddress() {
@@ -51,6 +58,15 @@ class DetailsViewController: UIViewController {
                 self.tokens = self.tokens.sorted { $0.balance > $1.balance }
             }
         }.resume()
+    }
+    
+    @objc
+    private func labelDidTap(sender: UITapGestureRecognizer) {
+        let labelText = walletAddressLabel.text
+        UIPasteboard.general.string = labelText
+        let ac = UIAlertController(title: "Address copied", message: nil, preferredStyle: .alert)
+        present(ac, animated: true)
+        dismiss(animated: true)
     }
     
 }
