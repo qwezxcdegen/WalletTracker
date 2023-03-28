@@ -24,8 +24,9 @@ class WalletsListTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let segue = segue.destination as? DetailsViewController else { return }
         guard let index = tableView.indexPathForSelectedRow?.row else { return }
-        segue.walletAddress = wallets[index].walletAddress!
+        segue.walletAddress = wallets[index].walletAddress ?? ""
         segue.solBalance = wallets[index].sol_balance
+        segue.walletName = wallets[index].walletName ?? ""
     }
     
     // MARK: - Table view data source

@@ -90,7 +90,6 @@
 				077CE21529CED90F004B3779 /* TokenTableViewCell.swift */,
 				077CE21729CEDA13004B3779 /* TokenModel.swift */,
 				07D5226729D0AE01007E0B70 /* CoinsModel.swift */,
-				07D5226929D0B000007E0B70 /* UILabel + Extension.swift */,
 				07D5226B29D0B1D7007E0B70 /* PriceModel.swift */,
 			);
 			name = "Second VC";
@@ -104,6 +103,7 @@
 				07C3157029CBBC4A0090C372 /* SceneDelegate.swift */,
 				077CE21129CED63B004B3779 /* UIImageView + Extension.swift */,
 				077CE21929CEE5B5004B3779 /* String + Extention.swift */,
+				07D5226929D0B000007E0B70 /* UILabel + Extension.swift */,
 			);
 			name = "Common Files";
 			sourceTree = "<group>";
@@ -127,12 +127,20 @@
 		07C3156D29CBBC4A0090C372 /* WalletTracker */ = {
 			isa = PBXGroup;
 			children = (
+				07D7878729D3453F00EB8313 /* Third VC */,
 				077CE21029CED620004B3779 /* Common Files */,
 				077CE20D29CED59C004B3779 /* Second VC */,
 				077CE20C29CED564004B3779 /* Supporting Files */,
 				077CE20B29CED550004B3779 /* First VC */,
 			);
 			path = WalletTracker;
+			sourceTree = "<group>";
+		};
+		07D7878729D3453F00EB8313 /* Third VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Third VC";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -16,6 +16,7 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var walletAddressLabel: UILabel!
     
+    var walletName = ""
     var walletAddress = ""
     var solBalance = 0.0
     var totalBalance = 0.0 {
@@ -29,6 +30,7 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = walletName
         
         fetchCoinsIDs()
         

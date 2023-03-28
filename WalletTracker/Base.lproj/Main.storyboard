@@ -288,7 +288,20 @@
                             <constraint firstItem="3rU-Ll-wh5" firstAttribute="trailing" secondItem="q7S-Y6-7qi" secondAttribute="trailing" id="q2x-up-Iq4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="B9h-di-4Cc"/>
+                    <navigationItem key="navigationItem" id="B9h-di-4Cc">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="tiF-ZV-y69">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="olZ-VC-8TD">
+                                <rect key="frame" x="271" y="5" width="106" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="NFTs ᐳ"/>
+                                <buttonConfiguration key="configuration" style="plain" title="NFTs ᐳ"/>
+                                <connections>
+                                    <segue destination="JQW-pQ-0hb" kind="show" id="Ro1-nn-cnU"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tokensTableView" destination="3rU-Ll-wh5" id="Hpi-J3-P7N"/>
                         <outlet property="totalBalanceLabel" destination="H9E-MQ-gDC" id="eQm-9Y-2Ww"/>
@@ -298,6 +311,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZaD-dQ-3Vd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2226.7175572519081" y="-35.211267605633807"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="boj-Zm-NAp">
+            <objects>
+                <viewController id="JQW-pQ-0hb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DMK-uB-pz7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Idu-8t-FKM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iFe-8j-MdP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fsP-wP-VzL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3280" y="-35"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ab4-uZ-hEd">
