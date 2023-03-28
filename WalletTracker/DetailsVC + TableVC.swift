@@ -27,13 +27,11 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
                 coin.symbol.lowercased() == tokens[index].info.symbol.lowercased()
             }
             cell.tokenWorthLabel.getCurrencyPrice(id: coins[coinIndex!].id, cell: cell) { totalPrice in
-                print("QWEQWEWQEWQ")
                 self.totalBalance += totalPrice
             }
-            
         }
         if let image = URL(string: tokens[index].info.image.encodeUrl) {
-            cell.tokenImage.load(url: image) { _ in
+            cell.tokenImage.load(url: image) {
                 cell.activityIndicator.stopAnimating()
             }
         }

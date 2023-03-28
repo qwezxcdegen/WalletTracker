@@ -289,9 +289,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="B9h-di-4Cc">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="tiF-ZV-y69">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="olZ-VC-8TD">
-                                <rect key="frame" x="271" y="5" width="106" height="34.333333333333336"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" id="tiF-ZV-y69">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="olZ-VC-8TD">
+                                <rect key="frame" x="296.66666666666669" y="5" width="80.333333333333314" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="NFTs ᐳ"/>
@@ -312,21 +312,59 @@
             </objects>
             <point key="canvasLocation" x="2226.7175572519081" y="-35.211267605633807"/>
         </scene>
-        <!--View Controller-->
+        <!--NFTs-->
         <scene sceneID="boj-Zm-NAp">
             <objects>
-                <viewController id="JQW-pQ-0hb" sceneMemberID="viewController">
+                <viewController id="JQW-pQ-0hb" customClass="NFTsViewController" customModule="WalletTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DMK-uB-pz7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5To-eZ-gyx">
+                                <rect key="frame" x="0.0" y="270" width="393" height="548"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nftCell" rowHeight="108" id="I3M-ZF-B5M" customClass="NFTTableViewCell" customModule="WalletTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="108"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I3M-ZF-B5M" id="3H4-Ds-p5c">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="108"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHG-FZ-bAp">
+                                                    <rect key="frame" x="20" y="16" width="81" height="81"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNP-Ju-YU3">
+                                                    <rect key="frame" x="331" y="44" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nftFloorPriceLabel" destination="XNP-Ju-YU3" id="1Pk-Hu-F6g"/>
+                                            <outlet property="nftImageView" destination="gHG-FZ-bAp" id="Ffg-kF-5qr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Idu-8t-FKM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="iFe-8j-MdP"/>
+                    <navigationItem key="navigationItem" title="NFTs" id="iFe-8j-MdP"/>
+                    <connections>
+                        <outlet property="nftsTableView" destination="5To-eZ-gyx" id="wIS-hc-WfT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsP-wP-VzL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3280" y="-35"/>
+            <point key="canvasLocation" x="3278.6259541984732" y="-35.211267605633807"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ab4-uZ-hEd">

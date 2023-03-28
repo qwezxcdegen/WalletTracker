@@ -25,6 +25,10 @@
 		07D5226829D0AE01007E0B70 /* CoinsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D5226729D0AE01007E0B70 /* CoinsModel.swift */; };
 		07D5226A29D0B000007E0B70 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D5226929D0B000007E0B70 /* UILabel + Extension.swift */; };
 		07D5226C29D0B1D7007E0B70 /* PriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D5226B29D0B1D7007E0B70 /* PriceModel.swift */; };
+		07D7878929D34A1A00EB8313 /* NFTsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7878829D34A1A00EB8313 /* NFTsViewController.swift */; };
+		07D7878B29D34E7500EB8313 /* NFTModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7878A29D34E7500EB8313 /* NFTModel.swift */; };
+		07D7878F29D35CE000EB8313 /* NFTsVC + TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7878E29D35CE000EB8313 /* NFTsVC + TableVC.swift */; };
+		07D7879129D3614C00EB8313 /* NFTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7879029D3614C00EB8313 /* NFTTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		07D5226729D0AE01007E0B70 /* CoinsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsModel.swift; sourceTree = "<group>"; };
 		07D5226929D0B000007E0B70 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
 		07D5226B29D0B1D7007E0B70 /* PriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceModel.swift; sourceTree = "<group>"; };
+		07D7878829D34A1A00EB8313 /* NFTsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTsViewController.swift; sourceTree = "<group>"; };
+		07D7878A29D34E7500EB8313 /* NFTModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTModel.swift; sourceTree = "<group>"; };
+		07D7878E29D35CE000EB8313 /* NFTsVC + TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NFTsVC + TableVC.swift"; sourceTree = "<group>"; };
+		07D7879029D3614C00EB8313 /* NFTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +135,8 @@
 		07C3156D29CBBC4A0090C372 /* WalletTracker */ = {
 			isa = PBXGroup;
 			children = (
-				07D7878729D3453F00EB8313 /* Third VC */,
 				077CE21029CED620004B3779 /* Common Files */,
+				07D7878729D3453F00EB8313 /* Third VC */,
 				077CE20D29CED59C004B3779 /* Second VC */,
 				077CE20C29CED564004B3779 /* Supporting Files */,
 				077CE20B29CED550004B3779 /* First VC */,
@@ -139,6 +147,10 @@
 		07D7878729D3453F00EB8313 /* Third VC */ = {
 			isa = PBXGroup;
 			children = (
+				07D7878829D34A1A00EB8313 /* NFTsViewController.swift */,
+				07D7878A29D34E7500EB8313 /* NFTModel.swift */,
+				07D7878E29D35CE000EB8313 /* NFTsVC + TableVC.swift */,
+				07D7879029D3614C00EB8313 /* NFTTableViewCell.swift */,
 			);
 			name = "Third VC";
 			sourceTree = "<group>";
@@ -219,16 +231,20 @@
 				07D5226A29D0B000007E0B70 /* UILabel + Extension.swift in Sources */,
 				077CE21629CED90F004B3779 /* TokenTableViewCell.swift in Sources */,
 				07C3158529CBBE4E0090C372 /* WalletsListTVC + AlertController.swift in Sources */,
+				07D7878F29D35CE000EB8313 /* NFTsVC + TableVC.swift in Sources */,
 				07C3157129CBBC4A0090C372 /* SceneDelegate.swift in Sources */,
 				077CE21429CED6CB004B3779 /* DetailsVC + TableVC.swift in Sources */,
 				07C3158329CBBD860090C372 /* WalletsListTableViewController.swift in Sources */,
 				07D5226829D0AE01007E0B70 /* CoinsModel.swift in Sources */,
 				077CE21A29CEE5B5004B3779 /* String + Extention.swift in Sources */,
+				07D7878B29D34E7500EB8313 /* NFTModel.swift in Sources */,
 				077CE21229CED63B004B3779 /* UIImageView + Extension.swift in Sources */,
 				077CE20F29CED5BA004B3779 /* DetailsViewController.swift in Sources */,
 				07C3159129CBC9180090C372 /* WalletModel.swift in Sources */,
+				07D7878929D34A1A00EB8313 /* NFTsViewController.swift in Sources */,
 				07C3158729CBBE880090C372 /* WalletTableViewCell.swift in Sources */,
 				07D5226C29D0B1D7007E0B70 /* PriceModel.swift in Sources */,
+				07D7879129D3614C00EB8313 /* NFTTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

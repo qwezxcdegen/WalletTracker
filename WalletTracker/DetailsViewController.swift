@@ -21,7 +21,7 @@ class DetailsViewController: UIViewController {
     var solBalance = 0.0
     var totalBalance = 0.0 {
         didSet {
-            totalBalanceLabel.text = String(round(totalBalance * 1000) / 1000) + "$"
+            totalBalanceLabel.text = String(round(totalBalance * 100) / 100) + "$"
         }
     }
     
