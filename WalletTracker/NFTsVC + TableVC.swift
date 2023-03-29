@@ -26,7 +26,6 @@ extension NFTsViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.nftImageView.load(url: URL(string: allNFTsForTV[indexPath.section][indexPath.row].image)!) {
             cell.activityIndicator.stopAnimating()
-            self.nftsTableView.reloadSections(IndexSet([indexPath.section]), with: .fade)
         }
         cell.nftFloorPriceLabel.text = allNFTsForTV[indexPath.section][indexPath.row].floorPriceString
 

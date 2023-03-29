@@ -49,8 +49,9 @@ class DetailsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("SEGUE")
         guard let segue = segue.destination as? NFTsViewController else { return }
-        
+        segue.solAddress = walletAddress
     }
     
     private func fetchTokensFromAddress() {

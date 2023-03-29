@@ -25,23 +25,25 @@ class NFTsViewController: UIViewController {
     }
     var collectionsNames: [String] = []
     
-    var solPrice = 0.0
+    var solAddress = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nftsTableView.delegate = self
         self.nftsTableView.dataSource = self
-        fetchNFTsFromAddress("5RoD6Qv6ika9nHde4YbBMq26uEf7E1qEphxMSiALqL9A")
+        fetchNFTsFromAddress(solAddress)
     }
     
     private func fetchNFTsFromAddress(_ walletAddress: String) {
         guard let url = URL(string: "https://api.coralcube.io/v1/getUserProfile?pubkey=\(walletAddress)") else { return }
         let request = URLRequest(url: url)
-        
+        print(1)
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data, error == nil else { return }
             guard let nftsData = try? JSONDecoder().decode(NFTs.self, from: data) else { return }
+            print(2)
             DispatchQueue.main.async {
+                print(3)
                 self.allNFTs = nftsData.sorted { $0.collectionName ?? "Unknown collection" < $1.collectionName ?? "Unknown collection"}
                 self.collectionsNames = Set(nftsData.map { $0.collectionName ?? "Unknown collection"}).sorted { $0 < $1 }
                 
@@ -51,7 +53,7 @@ class NFTsViewController: UIViewController {
                     }
                     self.allNFTs[i].collectionName = "Unknown collection"
                 }
-                
+                print(4)
                 for _ in 0..<self.collectionsNames.count {
                     self.allNFTsForTV.append(NFTs())
                 }
@@ -62,7 +64,7 @@ class NFTsViewController: UIViewController {
                         }
                     }
                 }
-                
+                print(5)
                 self.nftsTableView.reloadData()
                 print(self.collectionsNames)
                 print(self.allNFTs)

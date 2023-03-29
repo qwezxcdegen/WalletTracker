@@ -406,8 +406,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5To-eZ-gyx" firstAttribute="leading" secondItem="Idu-8t-FKM" secondAttribute="leading" id="Eh8-PG-ec8"/>
+                            <constraint firstItem="5To-eZ-gyx" firstAttribute="bottom" secondItem="Idu-8t-FKM" secondAttribute="bottom" id="PYc-1V-KGT"/>
                             <constraint firstItem="5To-eZ-gyx" firstAttribute="trailing" secondItem="Idu-8t-FKM" secondAttribute="trailing" id="Sfi-Tg-qSU"/>
-                            <constraint firstItem="5To-eZ-gyx" firstAttribute="bottom" secondItem="Idu-8t-FKM" secondAttribute="bottom" id="Z8t-Ll-LEZ"/>
                             <constraint firstItem="Uyb-cf-rYb" firstAttribute="top" secondItem="Idu-8t-FKM" secondAttribute="top" constant="16" id="aaR-OL-AmU"/>
                             <constraint firstItem="5To-eZ-gyx" firstAttribute="top" secondItem="gA6-cJ-Smh" secondAttribute="bottom" constant="8" id="iTW-39-fhM"/>
                             <constraint firstItem="Uyb-cf-rYb" firstAttribute="centerX" secondItem="DMK-uB-pz7" secondAttribute="centerX" id="pvt-cy-zGl"/>
