@@ -17,7 +17,7 @@ struct Nft: Codable {
     let image, originalImage: String
     let externalURL: String?
     let animationURL: JSONNull?
-    let collectionSymbol, collectionName: String?
+    var collectionSymbol, collectionName: String?
     let marketplace, marketplaceName: JSONNull?
     let royalty: Int
     let rarityRank: Int?

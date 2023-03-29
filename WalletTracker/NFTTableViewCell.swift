@@ -13,5 +13,6 @@ class NFTTableViewCell: UITableViewCell {
     
     
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var nftFloorPriceLabel: UILabel!
 }

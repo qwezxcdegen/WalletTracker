@@ -10,18 +10,11 @@ import UIKit
 
 extension NFTsViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        collectionsNames.count
+        allNFTsForTV.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var number = 0
-        for nft in allNFTs {
-            if nft.collectionName == collectionsNames[section] {
-                number += 1
-            }
-        }
-        
-        return number
+        return allNFTsForTV[section].count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -31,15 +24,19 @@ extension NFTsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = nftsTableView.dequeueReusableCell(withIdentifier: "nftCell", for: indexPath) as! NFTTableViewCell
         
-        let indexRow = indexPath.row
-    
-        cell.nftImageView.load(url: URL(string: allNFTs[indexRow].originalImage.decodeUrl)!) {
-            
+        cell.nftImageView.load(url: URL(string: allNFTsForTV[indexPath.section][indexPath.row].image)!) {
+            cell.activityIndicator.stopAnimating()
+            self.nftsTableView.reloadSections(IndexSet([indexPath.section]), with: .fade)
         }
-        cell.nftFloorPriceLabel.text = allNFTs[indexRow].floorPriceString
+        cell.nftFloorPriceLabel.text = allNFTsForTV[indexPath.section][indexPath.row].floorPriceString
+
+        
         
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        print("\(allNFTsForTV[section].map { $0.floorPriceString })")
+        return "Total price: \(allNFTsForTV[section].map { Double($0.floorPriceString[$0.floorPriceString.startIndex..<$0.floorPriceString.index(before: $0.floorPriceString.endIndex)]) ?? 0 }.reduce(0) { $0 + $1 }) ◎"
+    }
 }
