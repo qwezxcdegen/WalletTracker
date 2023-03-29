@@ -48,6 +48,11 @@ class DetailsViewController: UIViewController {
         walletAddressLabel.addGestureRecognizer(tap)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segue = segue.destination as? NFTsViewController else { return }
+        
+    }
+    
     private func fetchTokensFromAddress() {
         guard let url = URL(string: "https://api.shyft.to/sol/v1/wallet/all_tokens?network=mainnet-beta&wallet=\(walletAddress)") else { return }
         var request = URLRequest(url: url)

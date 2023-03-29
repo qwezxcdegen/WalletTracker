@@ -31,4 +31,22 @@ extension UILabel {
             }.resume()
         }
     }
+    
+    func getSolPrice(completionHandler: @escaping (Double) -> Void) {
+        DispatchQueue.global().async { [weak self] in
+            guard let url = URL(string: "https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd") else { return }
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                guard let data, error == nil else { return }
+                guard let data = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return }
+                DispatchQueue.main.async {
+                    guard let data = data["solana"] as? [String: Double] else { return }
+                    let price = data[data.keys.first!] ?? 0.0
+                    self?.text = "\(price)"
+                    completionHandler(price)
+                }
+            }.resume()
+        }
+    }
 }
